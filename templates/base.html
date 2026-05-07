@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MY Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+<body>
+<header id="header">
+						<h1>My Blog</h1>
+						<nav class="links">
+
+								<a href="/">Home</a>
+								<a href="/post">Posts</a>
+							    <a href="/about">About</a>
+							    <a href="/contact">Contact Us</a>
+							    <a href="/admin">Admin</a>
+							    {% if session.user %}
+							    <a href="/logout">Logout</a>
+							    {% else %}
+							    <a href="/login">Login</a>
+							    {% endif %}
+
+
+						</nav>
+
+					</header>
+
+{% with messages = get_flashed_messages() %}
+{% for msg in messages %}
+<p>{{msg}}</p>
+{% endfor %}
+{% endwith %}
+
+{% block content %}{% endblock %}
+
+</body>
+</html>

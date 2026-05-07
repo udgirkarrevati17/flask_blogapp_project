@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="welcome">
+	<h1>Welcome to My Blog</h1>
+	<p>Explore latest posts form all over the world.</p>
+</div>
+<div class="posts">
+	{% for p in posts[:6] %}
+	<div class="post">
+		<h3>{{ p.title }}</h3>
+		<p>{{ p.author }}</p>
+		{% if p.image %}
+		<img src="{{ url_for('static',filename='images/'+p.image) }}">
+		{% endif %}
+		<p>{{ p.content[:200] }}</p>
+
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}
+
+
+				<article class="post">
+					<header>
+						<div class="title">
+							<h2>WHY LEARN PYTHON??</h2>
+							<p>Discover why python is the most popular and the most versatile language</p>
+						</div>
+						<div class="metadata">
+							<time class="publish">April 3 , 2026</time>
+							<span class="name">Author : Ms.Revathi</span>
+							<img src="https://lens.usercontent.google.com/banana?agsi=CmdnbG9iYWw6OjAwMDA1NWNmZWM3MDAyNmQ6MDAwMDAwZWI6MTo1ZDI5NTc0YTM4ZTZlMDkwOjAwMDA1NWNmZWM3MDAyNmQ6MDAwMDAyNDIxYTIwMzM2ODowMDA2NGU4ZTE5YTcxNWZmEAIYAQ==">
+						</div>
+					</header>
+					<p>
+						Learning Python is highly beneficial because its simple, English-like syntax makes it the top choice for beginners, while its versatility supports high-demand careers in AI, data science, and web development. It boasts a massive, supportive community and powerful libraries (like Pandas, TensorFlow) that accelerate development for tasks ranging from automation to complex machine learning.
+						Key Reasons to Learn Python: Beginner-Friendly: Python's syntax is designed to be readable and concise, allowing new programmers to focus on learning programming logic rather than complex syntax. High Demand and Lucrative Careers: As a top-ranked language, Python is heavily used in industry by companies like Google, Netflix, and NASA, offering strong career prospects with high salaries. Versatility in AI and Data Science: Python is the de facto language for artificial intelligence, machine learning, and data analysis, supported by a vast ecosystem of libraries. Automation and Productivity: It is excellent for automating repetitive tasks, such as web scraping or file management, making it useful for developers and non-programmers alike. Massive Community Support: A large global community means abundant learning resources, tutorials, and pre-written code (libraries) are readily available. Future-Proof Skill: Due to its adaptability, Python remains relevant and growing in fields like blockchain and data engineering.
+					</p>
+
+				</article>
+
+				<article class="post">
+					<header>
+						<div class="title">
+							<h2>WHY LEARN AI??</h2>
+							<p>Discover why AI is the most popular and the most versatile mode of coding.</p>
+						</div>
+						<div class="metadata">
+							<time class="publish">April 3 , 2026</time>
+							<span class="name">Author : Ms.Revathi</span>
+							<img src="https://lens.usercontent.google.com/banana?agsi=CmdnbG9iYWw6OjAwMDA1NWNmZWM3MDAyNmQ6MDAwMDAwZWI6MTpiNTlkZDcxYTllODMyMDg5OjAwMDA1NWNmZWM3MDAyNmQ6MDAwMDAyNDIxYTIwMzM2ODowMDA2NGU4ZTEyNDlmODhmEAIYAQ==">
+						</div>
+					</header>
+					<p>
+						Learning AI is essential for staying competitive in a rapidly evolving workforce, as it boosts productivity by automating tasks, improves decision-making, and opens up high-paying, future-proof career opportunities. Mastering AI enables faster workflow (up to 80% for some tasks), enhances creative processes, and fosters critical thinking.
+						Here is why you should learn Artificial Intelligence:
+                        Career Growth & High Demand: AI skills are in high demand across all industries, often offering higher salaries and better job security than traditional tech roles.
+                        Increased Productivity: AI tools can automate repetitive tasks, manage large datasets, and accelerate project completion, allowing you to focus on complex, human-centric tasks.
+                        Future-Proofing Your Skills: Understanding AI helps you build resilience against job displacement by allowing you to adapt to new, AI-driven roles and workflows.
+                        Enhanced Innovation: Learning AI provides the capability to build new solutions, from intelligent apps to sophisticated data analytics, fostering innovation in any field.
+						Understanding and Ethics: Studying AI helps you understand how systems operate, enabling you to address critical ethical implications, such as bias, transparency, and data privacy.
+
+					</p>
+
+
+				</article>
+				<footer>
+					<p>
+						All rights Reserved ©
+						MY BLOG
+						2026
+					</p>
+				</footer>
+			</div>
+
+
+
+
+
+	</body>
+</html>

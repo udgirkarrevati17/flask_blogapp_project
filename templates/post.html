@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="formcontainer">
+	<h2>Create Posts</h2>
+	<form method="POST" action="/create_post" enctype="multipart/form-data" >
+		<input name="title" placeholder="Title">
+		<textarea name="content" placeholder="Content"></textarea>
+		<input type="file" name="image">
+		<button>Submit</button>
+
+	</form>
+</div>
+{% endblock %}

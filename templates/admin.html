@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="admin">
+    <h2>Admin Dashboard</h2>
+    {% for p in posts %}
+    <div class="post">
+        <h3>{{ p.title }}</h3>
+        <a href="/delete/{{p.id}}">Delete Post</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
